@@ -1,93 +1,39 @@
-# Test Banco Bogotá
+# App Inventory of Products
 
-## Descripción
+Este proyecto es una aplicación de inventario de productos construida con Angular. Proporciona funcionalidades para listar, agregar, actualizar y eliminar productos.
 
-Este proyecto es una aplicación de ejemplo para la gestión de productos, construida con Java y Spring Boot. Utiliza Maven como herramienta de construcción y gestión de dependencias.
+## Requisitos Previos
 
-## Estructura del Proyecto
+Asegúrate de tener instalados los siguientes requisitos previos en tu máquina:
 
-- **src/main/java**: Contiene el código fuente principal de la aplicación.
-    - **com.test.banco.bogota.app.controller**: Controladores REST.
-    - **com.test.banco.bogota.app.dto**: Clases DTO (Data Transfer Object).
-    - **com.test.banco.bogota.app.service**: Servicios de negocio.
-    - **com.test.banco.bogota.app.exception**: Clases de manejo de excepciones.
-- **src/test/java**: Contiene las pruebas unitarias y de integración.
-    - **com.test.banco.bogota.app.controller**: Pruebas de los controladores REST.
-
-
-## Requisitos
-
-- Java 17
-- Maven 3.6.3 o superior
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
+- Angular CLI (versión 12 o superior)
 
 ## Instalación
 
+Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
+
 1. Clona el repositorio:
-   ```sh
-    https://github.com/JoseGerardo105/InventoryUI   
+  git clone https://github.com/JoseGerardo105/InventoryUI
+
 
 2. Navega al directorio del proyecto:
-   ```sh
-    cd test-banco-bogota
+  cd app-inventory-of-products
+
+3. Instala las dependencias del proyecto:
+  npm install
 
 
-3. Compila el proyecto y descarga las dependencias:
-    ```sh
-    mvn clean install
+## Ejecución de la Aplicación
+
+Para ejecutar la aplicación en modo de desarrollo, utiliza el siguiente comando:
+  ng serve
 
 
-4. Ejecuta la aplicación:
-    ```sh
-    mvn spring-boot:run
+Luego, abre tu navegador y navega a http://localhost:4200/ para ver la aplicación en funcionamiento.
 
-La aplicación estará disponible en http://localhost:8080.
 
-5. Pruebas:
-Para ejecutar las pruebas unitarias y de integración, usa el siguiente comando:
-    ```sh
-    mvn test
-
-## Endpoints
-
-### Obtener todos los productos
-- **URL**: `/api/products`
-- **Método**: `GET`
-- **Respuesta**: Lista de productos
-
-### Obtener un producto por ID
-- **URL**: `/api/products/{id}`
-- **Método**: `GET`
-- **Respuesta**: Producto con el ID especificado
-
-### Crear un nuevo producto
-- **URL**: `/api/products`
-- **Método**: `POST`
-- **Cuerpo**: JSON con los datos del producto
-- **Respuesta**: Producto creado
-- **Cuerpo**: JSON con los datos del producto:
-  ```json
-  {
-    "name": "Producto de ejemplo",
-    "description": "Descripción del producto de ejemplo",
-    "price": 100.0,
-    "quantity": 10
-  }
-
-### Actualizar un producto
-- **URL**: `/api/products/{id}`
-- **Método**: `PUT`
-- **Cuerpo**: JSON con los datos actualizados del producto
-- **Respuesta**: Producto actualizado
-- **Cuerpo**: JSON con los datos del producto:
-  ```json
-  {
-    "name": "Producto de ejemplo",
-    "description": "Descripción del producto de ejemplo",
-    "price": 100.0,
-    "quantity": 10
-  }
-
-### Eliminar un producto
-- **URL**: `/api/products/{id}`
-- **Método**: `DELETE`
-- **Respuesta**: Confirmación de eliminación
+## Ejecución de Pruebas
+Para ejecutar las pruebas unitarias con Jasmine y Karma, utiliza el siguiente comando:
+  ng test
