@@ -1,0 +1,67 @@
+<div class="contend">
+
+<h2 mat-dialog-title>{{ isEditing ? 'Editar Producto' : 'Agregar Producto' }}</h2>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div mat-dialog-content>
+    <div class="inputs">
+      <!-- Name Field -->
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Nombre del Producto</mat-label>
+      <input matInput formControlName="name" placeholder="Ingrese el nombre del producto">
+      <mat-error *ngIf="productForm.get('name')?.errors?.['required']">
+        El nombre es obligatorio
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Category Field -->
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Categoría</mat-label>
+      <input matInput formControlName="category" placeholder="Ingrese la categoría">
+      <mat-error *ngIf="productForm.get('category')?.errors?.['required']">
+        La categoría es obligatoria
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Price Field -->
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="price" placeholder="Ingrese el precio">
+      <span matPrefix>$&nbsp;</span>
+      <mat-error *ngIf="productForm.get('price')?.errors?.['required']">
+        El precio es obligatorio
+      </mat-error>
+      <mat-error *ngIf="productForm.get('price')?.errors?.['min']">
+        El precio debe ser mayor o igual a 0
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Stock Quantity Field -->
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Cantidad en Stock</mat-label>
+      <input matInput type="number" formControlName="stockQuantity" placeholder="Ingrese la cantidad en stock">
+      <mat-error *ngIf="productForm.get('stockQuantity')?.errors?.['required']">
+        La cantidad en stock es obligatoria
+      </mat-error>
+      <mat-error *ngIf="productForm.get('stockQuantity')?.errors?.['min']">
+        La cantidad en stock debe ser mayor o igual a 0
+      </mat-error>
+    </mat-form-field>
+    </div>
+
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button type="button" (click)="onCancel()" class="custom-cancel-button">Cancelar</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="productForm.invalid || productForm.pristine"
+      class="custom-add-button">
+      {{ isEditing ? 'Actualizar' : 'Crear' }}
+    </button>
+  </div>
+</form>
+
+</div>

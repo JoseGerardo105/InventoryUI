@@ -1,0 +1,80 @@
+
+
+.contend{
+  margin: 40px;
+}
+
+mat-form-field {
+  margin-bottom: 1rem;
+}
+
+mat-dialog-content {
+  min-width: 350px;
+}
+
+
+button {
+  margin-left: 8px; /* Añade margen entre los botones */
+}
+
+mat-dialog-actions {
+  padding: 1rem 0;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.custom-add-button {
+  background-color: #4662b4e6;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  text-transform: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-add-button:hover {
+  background-color: #2338affa;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button.custom-add-button:disabled {
+  background-color: #b0bec5;
+  color: #eceff1;
+  cursor: not-allowed;
+}
+
+.custom-cancel-button {
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  text-transform: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-cancel-button:hover {
+  background-color: #c0392b;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.custom-cancel-button:disabled {
+  background-color: #f1948a;
+  color: #f5b7b1;
+  cursor: not-allowed;
+}
+
+
